@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 //import { restaurants } from '../fixtures';
-import Menu from './menu';
-import Reviews from './Reviews';
-import Rate from './Rate'
+import Menu from '../menu/menu';
+import Reviews from '../reviews/Reviews';
+import Rate from '../rate/Rate'
 
 class Restaurant extends Component {
   render() {

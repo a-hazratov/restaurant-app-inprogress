@@ -1,4 +1,4 @@
-import Product from './product';
+import Product from '../product/product';
 import styles from './menu.module.css';
 
 export default function Menu({menu}) {

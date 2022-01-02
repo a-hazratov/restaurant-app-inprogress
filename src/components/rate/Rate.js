@@ -1,5 +1,5 @@
 import React from 'react';
-import  {ReactComponent as Star}  from '../icons/star.svg';
+import  {ReactComponent as Star}  from '../../icons/star.svg';
 
 export default function Rate({value}) {
   let stars = Array.from(Array(value), (_, i) => i+1)

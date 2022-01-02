@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Reviews.module.css';
-import Rate from './Rate';
+import Rate from '../rate/Rate';
 
  class Reviews extends Component {
 
