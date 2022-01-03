@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function Menu({menu}) {
  
-  console.log(menu)
+ 
   return (
     <div className = {styles.maindiv}>
       {menu.map((product) => (

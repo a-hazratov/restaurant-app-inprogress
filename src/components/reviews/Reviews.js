@@ -8,9 +8,9 @@ import Rate from '../rate/Rate';
     let {reviews} = this.props;
 
    return (
-    <div className = {styles.reviewDiv}>
+    <div className = {styles.reviewDiv} >
       {reviews.map((review, index) => {
-        return  <div className = {styles.reviewCard} key = {index}>
+        return  <div className = {styles.reviewCard} key = {index} data-test="reviews">
                  <h4>{review.user}</h4>
                  <p>{review.text}</p>
                  <Rate value = {review.rating}/>

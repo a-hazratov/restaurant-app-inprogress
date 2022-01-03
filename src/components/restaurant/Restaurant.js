@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 //import { restaurants } from '../fixtures';
 import Menu from '../menu/menu';
 import Reviews from '../reviews/Reviews';
 import Rate from '../rate/Rate'
 
-class Restaurant extends Component {
+class Restaurant extends PureComponent {
   render() {
     let activeRestaurant = this.props.restaurant;
     let revs = activeRestaurant.reviews;
-    let rating = 0;
-    for (let i = 0; i < revs.length; i++) {
-     rating += revs[i].rating;
-    }
-    let value = Math.floor(rating / revs.length);
+    const total = revs.reduce((acc, { rating })=> acc + rating, 0)
+    let value = Math.round(total / revs.length);
     
   
     return (

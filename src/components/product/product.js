@@ -7,17 +7,20 @@ import { ReactComponent as Minus } from '../../icons/minus.svg';
 import { ReactComponent as Plus } from '../../icons/plus.svg';
 
 function Product({ product, amount, decrement, increment }) {
- 
+ console.log(typeof amount)
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-test = 'product'>
       <p>{product.name}</p>
       <p>{product.ingredients.join(', ')}</p>
       <p>{product.price} $</p>
-      <button onClick={decrement}>
+      <button onClick={decrement} data-test="decrement">
         <Minus className={styles.icon} />
       </button>
-      {amount}
-      <button onClick={increment}>
+      <div data-test="amount">
+        {amount}
+      </div>
+      
+      <button onClick={increment} data-test="increment">
         <Plus className={styles.icon} />
       </button>
     </div>
