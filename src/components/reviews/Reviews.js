@@ -9,8 +9,8 @@ import Rate from '../rate/Rate';
 
    return (
     <div className = {styles.reviewDiv}>
-      {reviews.map((review) => {
-        return  <div className = {styles.reviewCard}>
+      {reviews.map((review, index) => {
+        return  <div className = {styles.reviewCard} key = {index}>
                  <h4>{review.user}</h4>
                  <p>{review.text}</p>
                  <Rate value = {review.rating}/>

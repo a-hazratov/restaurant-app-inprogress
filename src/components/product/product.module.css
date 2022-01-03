@@ -4,9 +4,9 @@
   background: #eee;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 300px;
+  width: 100%;
 }
 
 .icon path {
-  fill: red;
+  fill: black;
 }
