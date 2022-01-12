@@ -1,12 +1,12 @@
 import { PureComponent } from 'react';
 import Restaurants from '../restaurants/restaurants';
-import {restaurants} from '../../fixtures';
+//import { restaurants } from '../../fixtures';
 
 export default class App extends PureComponent {
   render() {
     return (
       <div>
-        <Restaurants restaurants={restaurants} />
+        <Restaurants restaurants={this.props.restaurants} />
       </div>
     );
   }
