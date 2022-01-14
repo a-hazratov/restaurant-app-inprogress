@@ -4,7 +4,7 @@
   background: #eee;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 100%;
+  width: auto;
 }
 
 .icon path {

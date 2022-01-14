@@ -1,0 +1,47 @@
+.basketContainer {
+  height: 50vh;
+  border: 1px green solid;
+  margin-top: 90px;
+}
+.basket {
+  width: 300px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding: 5px;
+}
+
+.basket p {
+  text-align: center;
+}
+
+.basket_h {
+  width: 100%;
+  margin-top: -1px;
+  border: 1px dotted grey;
+  padding: 0;
+  background-color: brown;
+  border-radius: 4px 4px 0px 0px;
+  margin-left: -1px;
+}
+
+.basket_h h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.basket ul li {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.basket_ul {
+  height: auto;
+  padding: 3px;
+  margin: 0;
+}

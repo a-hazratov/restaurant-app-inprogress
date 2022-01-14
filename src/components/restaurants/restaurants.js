@@ -2,9 +2,10 @@ import { useState, useMemo } from 'react';
 //import Menu from './menu';
 import Restaurant from '../restaurant/Restaurant';
 import Tabs from '../tabs/tabs';
+import Basket from '../basket';
+import styles from './restaurants.module.css';
 
-
-export default function Restaurants( {restaurants} ) {
+export default function Restaurants({ restaurants }) {
   const [activeId, setActiveId] = useState(restaurants[0].id);
 
   const tabs = useMemo(
@@ -20,12 +21,10 @@ export default function Restaurants( {restaurants} ) {
   return (
     <div>
       <Tabs tabs={tabs} onChange={setActiveId} />
-      <Restaurant restaurant = {activeRestaurant}/>
-    
+      <div className={styles.restaurants}>
+        <Restaurant restaurant={activeRestaurant} />
+        <Basket />
+      </div>
     </div>
   );
 }
-
-
-//<Menu menu={activeRestaurant.menu} />
-//<Restaurant restaurant = {activeRestaurant}/>

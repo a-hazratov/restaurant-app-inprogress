@@ -13,12 +13,12 @@ function Product({ product, amount, decrement, increment }) {
       <p>{product.name}</p>
       <p>{product.ingredients.join(', ')}</p>
       <p>{product.price} $</p>
-      <button onClick={() => decrement(product.id)} data-test="decrement">
+      <button onClick={decrement} data-test="decrement">
         <Minus className={styles.icon} />
       </button>
       <div data-test="amount">{amount}</div>
 
-      <button onClick={() => increment(product.id)} data-test="increment">
+      <button onClick={increment} data-test="increment">
         <Plus className={styles.icon} />
       </button>
     </div>
@@ -37,12 +37,12 @@ const mapStateToProps = (state, props) => ({
   amount: state.order[props.product.id] || 0,
 });
 
-const mapDispatchToProps = {
-  increment: increment,
-  decrement: decrement,
-};
-// const mapDispatchToProps = (dispatch) => ({
-//   increment: () => dispatch(increment()),
-//   decrement: () => dispatch(decrement()),
-// });
+// const mapDispatchToProps = {
+//   increment: increment,
+//   decrement: decrement,
+// };
+const mapDispatchToProps = (dispatch, props) => ({
+  increment: () => dispatch(increment(props.product.id)),
+  decrement: () => dispatch(decrement(props.product.id)),
+});
 export default connect(mapStateToProps, mapDispatchToProps)(Product);
