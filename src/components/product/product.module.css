@@ -9,4 +9,6 @@
 
 .icon path {
   fill: black;
+  padding: 0;
+  margin: 0;
 }

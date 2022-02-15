@@ -1,25 +1,13 @@
 import React, { PureComponent } from 'react';
 import styles from './basket.module.css';
-import { connect } from 'react-redux';
 import { restaurants } from '../../fixtures';
+import BasketItem from './basketItem';
+import { connect } from 'react-redux';
 
-export class basket extends PureComponent {
-  displayOrder = (menu) => {
-    if (!this.props.order) return null;
-    const order = this.props.order;
-    return menu.map((each) => {
-      if (order[each.id]) {
-        return (
-          <li>
-            {each.name} {order[each.id]} ${each.price}
-          </li>
-        );
-      }
-      return null;
-    });
-  };
+class basket extends PureComponent {
   render() {
-    const allMenu = restaurants.flatMap((each) => [...each.menu]);
+    console.log('component runs');
+    console.log(restaurants[0].menu[0].id);
     console.log(this.props.order);
     return (
       <div className={styles.basketContainer}>
@@ -27,17 +15,15 @@ export class basket extends PureComponent {
           <div className={styles.basket_h}>
             <h3>Your order</h3>
           </div>
-          {Object.keys(this.props.order).length !== 0 ? (
-            <ul className={styles.basket_ul}>{this.displayOrder(allMenu)}</ul>
-          ) : (
-            <p>No items.</p>
-          )}
+          <BasketItem name={'dish name delicious bla bla'} amount={'2'} />
         </div>
       </div>
     );
   }
 }
+
 const mapStateToProps = (state) => ({
   order: state.order,
 });
+
 export default connect(mapStateToProps)(basket);

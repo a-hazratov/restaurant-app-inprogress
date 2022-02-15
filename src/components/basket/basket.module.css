@@ -1,6 +1,6 @@
 .basketContainer {
-  height: 50vh;
-  border: 1px green solid;
+  height: auto;
+
   margin-top: 90px;
 }
 .basket {

@@ -1,0 +1,19 @@
+.order_item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.5fr;
+  align-items: center;
+}
+
+.order_item p {
+  margin-right: 0;
+  padding: 0;
+}
+
+.order_item span {
+  margin: 0;
+}
+
+.close_item {
+  cursor: pointer;
+}
